@@ -14,31 +14,31 @@ class PlatformshCli < Formula
 
   on_macos do
     url "https://github.com/akalipetis/psh-go/releases/download/4.0.0-beta.7/platform_4.0.0-beta.7_darwin_all.tar.gz"
-    sha256 "e1642f77fa9b57d60b37a5f0de8a843e282beab0609b81ddd1d16b99d507e35a"
+    sha256 "3cf8816ad1b2f931983e926bd8c702967a94c30e88050026a0b25b9a5fa50d83"
 
     def install
       bin.install "platform"
-      generate_completions_from_executable("platform", "completion", "-s")
+      generate_completions_from_executable(bin/"platform", "completion", "-s")
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/akalipetis/psh-go/releases/download/4.0.0-beta.7/platform_4.0.0-beta.7_linux_arm64.tar.gz"
-      sha256 "e3eb913ce9f66c92d10bb9de22c29b82440f5042380bea3052c48eff87a20142"
+      sha256 "2daab56eb1500707e77db5ca0a2ad9f308de625cd0cb9acf92671e5bc4d2ceed"
 
       def install
         bin.install "platform"
-        generate_completions_from_executable("platform", "completion", "-s")
+        generate_completions_from_executable(bin/"platform", "completion", "-s")
       end
     end
     if Hardware::CPU.intel?
       url "https://github.com/akalipetis/psh-go/releases/download/4.0.0-beta.7/platform_4.0.0-beta.7_linux_amd64.tar.gz"
-      sha256 "6ee46b778fd0b6c9cbf2c3c91541a3a0007cb126148f41804782afac8400163f"
+      sha256 "c0c21eef6d32dd638a5883deaf314a02ac132e49524f18f596a538cc8424cb27"
 
       def install
         bin.install "platform"
-        generate_completions_from_executable("platform", "completion", "-s")
+        generate_completions_from_executable(bin/"platform", "completion", "-s")
       end
     end
   end
