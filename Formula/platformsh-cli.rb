@@ -14,7 +14,7 @@ class PlatformshCli < Formula
 
   on_macos do
     url "https://github.com/akalipetis/psh-go/releases/download/4.0.0-beta.7/platform_4.0.0-beta.7_darwin_all.tar.gz"
-    sha256 "163d7dbebd6cd755b34d692b35e8582bfc97f7e6adf14d1c99f0793267c11402"
+    sha256 "230d6a99b074926483c0aa287c87cd32f1716d257b0bd6255d958939dbbeef25"
 
     def install
       bin.install "platform"
@@ -25,7 +25,7 @@ class PlatformshCli < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/akalipetis/psh-go/releases/download/4.0.0-beta.7/platform_4.0.0-beta.7_linux_arm64.tar.gz"
-      sha256 "ef0ae1d5c4934b7f6e0046fb24afec044223aa44c9174d0c959431d31bb9dc47"
+      sha256 "0885c844bccbdc1b0c32f0e1adaaf0bcedcac9c1ee51676d9eb4a1a967b759b9"
 
       def install
         bin.install "platform"
@@ -34,7 +34,7 @@ class PlatformshCli < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/akalipetis/psh-go/releases/download/4.0.0-beta.7/platform_4.0.0-beta.7_linux_amd64.tar.gz"
-      sha256 "9869dc54f651c2ae5ca2c69973bd995eec109cba3d09e224b9d7664a8ba5dd33"
+      sha256 "f46f2cb14e633ab6ee46f5273f8a0aadaeffdbb847b716ca8bdc0b0ec52ac6ac"
 
       def install
         bin.install "platform"
