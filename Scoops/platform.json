@@ -1,0 +1,15 @@
+{
+    "version": "4.0.0-beta.7",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/akalipetis/psh-go/releases/download/4.0.0-beta.7/platform_4.0.0-beta.7_windows_amd64.zip",
+            "bin": [
+                "platform.exe"
+            ],
+            "hash": "808a02342f86a7fc68f10a2d737641c183bcb4cc7b5bd8c876898ea9fa88b657"
+        }
+    },
+    "homepage": "https://docs.platform.sh/administration/cli.html",
+    "license": "MIT",
+    "description": "Platform.sh CLI"
+}
