@@ -6,7 +6,7 @@
             "bin": [
                 "platform.exe"
             ],
-            "hash": "1ad67a52e2d8cf95889e452d119c6f497c7ef28f0117cf9a1bf74e936d92767b"
+            "hash": "20c86bf6e65f889ece59e78aea93a86f498b033a5b089a6f252ae3e4ca23ed94"
         }
     },
     "homepage": "https://docs.platform.sh/administration/cli.html",
