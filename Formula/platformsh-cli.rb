@@ -5,7 +5,7 @@
 class PlatformshCli < Formula
   desc "Platform.sh CLI"
   homepage "https://docs.platform.sh/administration/cli.html"
-  version "4.0.0-beta.4"
+  version "4.0.0-beta.7"
   license "MIT"
 
   depends_on "git" => :optional
@@ -13,35 +13,32 @@ class PlatformshCli < Formula
   depends_on "openssl@1.1"
 
   on_macos do
-    url "https://github.com/akalipetis/psh-go/releases/download/4.0.0-beta.4/platform_4.0.0-beta.4_darwin_all.tar.gz"
-    sha256 "010d1b75af7d84038e217985e81b8debd6002b106ae4be1f25f5ad1bf7f2e554"
+    url "https://github.com/akalipetis/psh-go/releases/download/4.0.0-beta.7/platform_4.0.0-beta.7_darwin_all.tar.gz"
+    sha256 "e1642f77fa9b57d60b37a5f0de8a843e282beab0609b81ddd1d16b99d507e35a"
 
     def install
       bin.install "platform"
-      bash_completion.install "completion/bash/platform.bash" => "platform"
-      zsh_completion.install "completion/zsh/_platform" => "_platform"
+      generate_completions_from_executable("platform", "completion", "-s")
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/akalipetis/psh-go/releases/download/4.0.0-beta.4/platform_4.0.0-beta.4_linux_arm64.tar.gz"
-      sha256 "80bbeb93ac1e6191a3017d8608afd759940562293276b7a4b91918bbb01d7700"
+      url "https://github.com/akalipetis/psh-go/releases/download/4.0.0-beta.7/platform_4.0.0-beta.7_linux_arm64.tar.gz"
+      sha256 "e3eb913ce9f66c92d10bb9de22c29b82440f5042380bea3052c48eff87a20142"
 
       def install
         bin.install "platform"
-        bash_completion.install "completion/bash/platform.bash" => "platform"
-        zsh_completion.install "completion/zsh/_platform" => "_platform"
+        generate_completions_from_executable("platform", "completion", "-s")
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/akalipetis/psh-go/releases/download/4.0.0-beta.4/platform_4.0.0-beta.4_linux_amd64.tar.gz"
-      sha256 "4d271900e9b1f5e0c1eac132900142e9884c7b3d38b2e6b72d18bc9801206ad6"
+      url "https://github.com/akalipetis/psh-go/releases/download/4.0.0-beta.7/platform_4.0.0-beta.7_linux_amd64.tar.gz"
+      sha256 "6ee46b778fd0b6c9cbf2c3c91541a3a0007cb126148f41804782afac8400163f"
 
       def install
         bin.install "platform"
-        bash_completion.install "completion/bash/platform.bash" => "platform"
-        zsh_completion.install "completion/zsh/_platform" => "_platform"
+        generate_completions_from_executable("platform", "completion", "-s")
       end
     end
   end
